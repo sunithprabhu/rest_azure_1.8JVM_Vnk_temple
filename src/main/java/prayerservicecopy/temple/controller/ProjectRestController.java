@@ -278,8 +278,8 @@ public class ProjectRestController {
 		CloudStorageAccount storageAccount = CloudStorageAccount.parse(AzureCred);
 		
 		CloudBlobClient blobClient = storageAccount.createCloudBlobClient();
-		
-		CloudBlobContainer conatiner = blobClient.getContainerReference("images-vnk-temple");
+		System.out.println("CloudBlobClient got created");
+		CloudBlobContainer conatiner = blobClient.getContainerReference("images-vnk-tmple");
 		
 		BlobContainerPermissions conatinerPermissions = new BlobContainerPermissions();
 		
@@ -309,7 +309,7 @@ public class ProjectRestController {
 		
 		CloudBlobClient blobClient = storageAccount.createCloudBlobClient();
 		
-        CloudBlobContainer conatiner = blobClient.getContainerReference("videos-vnk-temple");
+        CloudBlobContainer conatiner = blobClient.getContainerReference("videos-vnk-tmple");
 		
 		BlobContainerPermissions conatinerPermissions = new BlobContainerPermissions();
 		
@@ -344,7 +344,7 @@ public class ProjectRestController {
 		
 		CloudBlobClient blobClient = storageAccount.createCloudBlobClient();
 		
-        CloudBlobContainer conatiner = blobClient.getContainerReference("videos-vnk-temple");
+        CloudBlobContainer conatiner = blobClient.getContainerReference("videos-vnk-tmple");
         
         for(ListBlobItem blobItem : conatiner.listBlobs())
         {
@@ -368,7 +368,7 @@ public class ProjectRestController {
 		
 		CloudBlobClient blobClient = storageAccount.createCloudBlobClient();
 		
-        CloudBlobContainer container = blobClient.getContainerReference("images-vnk-temple");
+        CloudBlobContainer container = blobClient.getContainerReference("images-vnk-tmple");
         
         for(ListBlobItem blobItem : container.listBlobs())
         {
