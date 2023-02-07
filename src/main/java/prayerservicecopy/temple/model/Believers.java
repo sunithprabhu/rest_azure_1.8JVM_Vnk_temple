@@ -9,7 +9,7 @@ package prayerservicecopy.temple.model;
 //import jakarta.persistence.Table;
 
 @javax.persistence.Entity
-@javax.persistence.Table(name="Believer")
+@javax.persistence.Table(name="BelieverVnkTmple")
 public class Believers {
 	
 	@javax.persistence.Id

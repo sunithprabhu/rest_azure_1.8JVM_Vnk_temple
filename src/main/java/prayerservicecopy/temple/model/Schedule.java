@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "schedule")
+@Table(name = "scheduleVnkTemple")
 public class Schedule {
 	
 	
