@@ -273,13 +273,12 @@ public class ProjectRestController {
 	@PostMapping(value="/imageUpload",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	public String imgUpload(@RequestParam MultipartFile file) throws InvalidKeyException, URISyntaxException, StorageException, IOException
 	{
-        String AzureCred = "DefaultEndpointsProtocol=https;AccountName=prabhustorageaccount;AccountKey=RbQ8RwSIlbgKZ5ZHMp/CjqeeJF7UXNnD1mP3Vabb2D//ctO90kTLyCQXU67sSM5uYa6HTDgQgZ9O+ASt3dtqRA==;EndpointSuffix=core.windows.net";
-		
+        String AzureCred = "DefaultEndpointsProtocol=https;AccountName=jerusalemstorageaccount;AccountKey=vyJ890j1SMlOeHFjYHzRXc3aHlqEy3+LT8b9cu6QVxNHJ7Y3tgo1XWMu8JpxqyjMjn0tUHBVGg5U+AStJLVaSQ==;EndpointSuffix=core.windows.net";
 		CloudStorageAccount storageAccount = CloudStorageAccount.parse(AzureCred);
 		
 		CloudBlobClient blobClient = storageAccount.createCloudBlobClient();
 		System.out.println("CloudBlobClient got created");
-		CloudBlobContainer conatiner = blobClient.getContainerReference("images-vnk-tmple");
+		CloudBlobContainer conatiner = blobClient.getContainerReference("images-gzl-tmple");
 		
 		BlobContainerPermissions conatinerPermissions = new BlobContainerPermissions();
 		
@@ -303,13 +302,12 @@ public class ProjectRestController {
 	@PostMapping(value = "/uploadVideo", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	public String uploadVideo(@RequestParam MultipartFile file) throws InvalidKeyException, URISyntaxException, StorageException, IOException
 	{
-		String AzureCred = "DefaultEndpointsProtocol=https;AccountName=prabhustorageaccount;AccountKey=RbQ8RwSIlbgKZ5ZHMp/CjqeeJF7UXNnD1mP3Vabb2D//ctO90kTLyCQXU67sSM5uYa6HTDgQgZ9O+ASt3dtqRA==;EndpointSuffix=core.windows.net";
-		
+		String AzureCred = "DefaultEndpointsProtocol=https;AccountName=jerusalemstorageaccount;AccountKey=vyJ890j1SMlOeHFjYHzRXc3aHlqEy3+LT8b9cu6QVxNHJ7Y3tgo1XWMu8JpxqyjMjn0tUHBVGg5U+AStJLVaSQ==;EndpointSuffix=core.windows.net";
 		CloudStorageAccount storageAccount = CloudStorageAccount.parse(AzureCred);
 		
 		CloudBlobClient blobClient = storageAccount.createCloudBlobClient();
 		
-        CloudBlobContainer conatiner = blobClient.getContainerReference("videos-vnk-tmple");
+        CloudBlobContainer conatiner = blobClient.getContainerReference("videos-gzl-tmple");
 		
 		BlobContainerPermissions conatinerPermissions = new BlobContainerPermissions();
 		
@@ -338,13 +336,12 @@ public class ProjectRestController {
 		
 		ArrayList<String> blobs = new ArrayList<String>();
        
-		String AzureCred = "DefaultEndpointsProtocol=https;AccountName=prabhustorageaccount;AccountKey=RbQ8RwSIlbgKZ5ZHMp/CjqeeJF7UXNnD1mP3Vabb2D//ctO90kTLyCQXU67sSM5uYa6HTDgQgZ9O+ASt3dtqRA==;EndpointSuffix=core.windows.net";
-		
+		String AzureCred = "DefaultEndpointsProtocol=https;AccountName=jerusalemstorageaccount;AccountKey=vyJ890j1SMlOeHFjYHzRXc3aHlqEy3+LT8b9cu6QVxNHJ7Y3tgo1XWMu8JpxqyjMjn0tUHBVGg5U+AStJLVaSQ==;EndpointSuffix=core.windows.net";
 		CloudStorageAccount storageAccount = CloudStorageAccount.parse(AzureCred);
 		
 		CloudBlobClient blobClient = storageAccount.createCloudBlobClient();
 		
-        CloudBlobContainer conatiner = blobClient.getContainerReference("videos-vnk-tmple");
+        CloudBlobContainer conatiner = blobClient.getContainerReference("videos-gzl-tmple");
         
         for(ListBlobItem blobItem : conatiner.listBlobs())
         {
@@ -362,13 +359,12 @@ public class ProjectRestController {
 	{
 		ArrayList<String> blobs = new ArrayList<String>();
 	       
-		String AzureCred = "DefaultEndpointsProtocol=https;AccountName=prabhustorageaccount;AccountKey=RbQ8RwSIlbgKZ5ZHMp/CjqeeJF7UXNnD1mP3Vabb2D//ctO90kTLyCQXU67sSM5uYa6HTDgQgZ9O+ASt3dtqRA==;EndpointSuffix=core.windows.net";
-		
+		String AzureCred = "DefaultEndpointsProtocol=https;AccountName=jerusalemstorageaccount;AccountKey=vyJ890j1SMlOeHFjYHzRXc3aHlqEy3+LT8b9cu6QVxNHJ7Y3tgo1XWMu8JpxqyjMjn0tUHBVGg5U+AStJLVaSQ==;EndpointSuffix=core.windows.net";
 		CloudStorageAccount storageAccount = CloudStorageAccount.parse(AzureCred);
 		
 		CloudBlobClient blobClient = storageAccount.createCloudBlobClient();
 		
-        CloudBlobContainer container = blobClient.getContainerReference("images-vnk-tmple");
+        CloudBlobContainer container = blobClient.getContainerReference("images-gzl-tmple");
         
         for(ListBlobItem blobItem : container.listBlobs())
         {
